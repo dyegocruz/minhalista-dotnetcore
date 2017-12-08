@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 using Microsoft.EntityFrameworkCore;
 using MinhasCompras.Models;
+using MinhaLista.Models;
 
 namespace MinhasCompras
 {
@@ -28,6 +29,7 @@ namespace MinhasCompras
 
             services.AddDbContext<MVCContext>(options => 
                 options.UseSqlite("Data Source=MinhasCompras.db"));
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
