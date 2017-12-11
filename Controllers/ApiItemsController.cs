@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MinhasCompras.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace MinhasCompras.Controllers
 {
     [Produces("application/json")]
     [Route("api/ApiItems")]
+    [EnableCors("AllowAll")]
     public class ApiItemsController : Controller
     {
         private readonly MVCContext _context;
