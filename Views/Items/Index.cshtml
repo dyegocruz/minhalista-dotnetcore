@@ -13,7 +13,7 @@
             <tr class="tr_clone row @(@item.Checked == true ? "item-checked" : "")">
                 <td>
                     <input type="hidden" class="ID" name="id[]" value="@item.ID" />
-                    <input type="checkbox" class="input_item_check" name="checked[]" />
+                    <input type="checkbox" class="input_item_check" checked="@item.Checked" name="checked[]" />
                     <input type="text" class="input_item" name="Nome[]" value="@item.Nome" />
                     <button type="button" class="add btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span></button>
                     <button type="button" class="remove btn btn-danger btn-sm"><span class="glyphicon glyphicon-minus"></span></button>
